@@ -677,7 +677,7 @@ def inference_flow(model,
     if inference_video is not None:
         filenames, fps = extract_video(inference_video)  # list of [H, W, 3]
     else:
-        filenames = sorted(glob(inference_dir + '/*.png') + glob(inference_dir + '/*.jpg'))
+        filenames = sorted(glob(inference_dir + '/*.png') + glob(inference_dir + '/*.jpg') + glob(inference_dir + '/*.jpeg'))
     print('%d images found' % len(filenames))
 
     vis_flow_preds = []
